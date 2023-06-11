@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bajrang Baan</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="textSize">999</string>
+    <string name="textErr">"Can't read text file..."</string>
+</resources>
