@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="dev.sibansal.bajrangbaan.MainActivity">
+
+    <!-- Chapter Menu -->
+    <View
+        android:id="@+id/topView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/rounded_border"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:visibility="visible"
+        />
+
+    <!-- Buttons inside the view -->
+    <Button
+        android:id="@+id/bajrangBaan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bajrangBaan"
+        style="@style/primaryButton"
+        android:textSize="15pt"
+        app:layout_constraintStart_toStartOf="@id/topView"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintTop_toTopOf="@id/topView"
+        app:layout_constraintBottom_toTopOf="@+id/hanumanChalisa"
+        app:layout_constraintWidth_default="spread"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <Button
+        style="@style/primaryButton"
+        android:id="@+id/hanumanChalisa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hanumanChalisa"
+        android:textSize="15pt"
+        app:layout_constraintStart_toStartOf="@id/topView"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintTop_toBottomOf="@id/bajrangBaan"
+        app:layout_constraintBottom_toTopOf="@+id/sankatMochan"
+        app:layout_constraintWidth_default="spread"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <Button
+        style="@style/primaryButton"
+        android:id="@+id/sankatMochan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sankatMochan"
+        android:textSize="15pt"
+        app:layout_constraintStart_toStartOf="@id/topView"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintTop_toBottomOf="@id/hanumanChalisa"
+        app:layout_constraintBottom_toTopOf="@+id/hanumanAarti"
+        app:layout_constraintWidth_default="spread"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <Button
+        style="@style/primaryButton"
+        android:id="@+id/hanumanAarti"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hanumanAarti"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="15pt"
+        app:layout_constraintStart_toStartOf="@id/topView"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintTop_toBottomOf="@id/sankatMochan"
+        app:layout_constraintBottom_toBottomOf="@id/topView"
+        app:layout_constraintWidth_default="spread"
+        />
+
+    <!-- Parent Layout-->
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top View-->
+        <LinearLayout
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chapterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/chapterTitle"
+                android:textSize="10pt"
+                android:gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/fontSize"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/textSize"
+                android:textSize="10pt"
+                android:gravity="center_vertical|rightty "
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                tools:ignore="NestedWeights" />
+
+        </LinearLayout>
+
+        <!-- Helper Divider-->
+        <View
+            android:id="@+id/topDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- Text Canvas-->
+        <ScrollView
+            android:id="@+id/textScroll"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="0dp"
+            android:layout_weight="85"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textCanvas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:text="@string/app_name"/>
+        </ScrollView>
+
+        <!-- Helper Divider-->
+        <View
+            android:id="@+id/bottomDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- Bottom View-->
+        <LinearLayout
+            android:id="@+id/zoomControlLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/minus"
+                style="@style/primaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/minus"
+                android:textSize="15pt"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                tools:ignore="NestedWeights"
+                />
+
+            <Button
+                android:id="@+id/chapterMenu"
+                style="@style/menuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/chapterMenu"
+                android:textSize="15pt"
+                android:layout_weight="1"
+                tools:ignore="NestedWeights" />
+
+            <Button
+                android:id="@+id/plus"
+                style="@style/primaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/plus"
+                android:layout_weight="1"
+                android:textSize="15pt"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

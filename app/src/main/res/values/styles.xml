@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="primaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">#A76F6F</item> <!-- Set the desired purple color here -->
+    </style>
+
+    <style name="menuButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">#EAB2A0</item> <!-- Set the desired purple color here -->
+    </style>
+</resources>
