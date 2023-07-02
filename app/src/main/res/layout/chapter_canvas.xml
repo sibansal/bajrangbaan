@@ -119,7 +119,7 @@
                 android:layout_weight="1"
                 android:text="@string/textSize"
                 android:textSize="10pt"
-                android:gravity="center_vertical|rightty "
+                android:gravity="center_vertical|right"
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
                 tools:ignore="NestedWeights" />
